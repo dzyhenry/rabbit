@@ -16,7 +16,6 @@
     },
     methods: { 
       switchTab(selectedTab) {
-        console.log('selectedTab', selectedTab);
         switch(selectedTab) {
           case 0:
             this.isSelected0 = true;

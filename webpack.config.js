@@ -67,7 +67,7 @@ const cssLoaderName = 'css-loader-bbq';
 
 const urlLoader = `url-loader?name=${bundlename}`;
 module.exports = {
-  entry: { earth: './src/client.js' },
+  entry: { rabbit: './src/client.js' },
   output: {
     filename,
     chunkFilename: filename,

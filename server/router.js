@@ -13,7 +13,7 @@ const router = httpHashRouter();
 
 // api 服务
 const apiHandler = require('./handlers/apiHandler');
-router.set(`${rootdir}api/earth/-/*`, apiHandler);
+router.set(`${rootdir}api/course/-/*`, apiHandler);
 
 // web page 渲染
 router.set(`${rootdir}`, viewHandler);

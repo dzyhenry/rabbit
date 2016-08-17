@@ -6,7 +6,7 @@ var outputdir = path.resolve(basedir, 'public');
 var rootdir = '/';
 var publicPath = rootdir;
 
-var appName = 'earth';
+var appName = 'rabbit';
 
 module.exports = {
   basedir: basedir,
