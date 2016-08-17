@@ -10,11 +10,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="class in classes">
-        <td>{{class.className}}</td>
-        <td>{{class.teather}}</td>
-        <td>{{class.startTime}}</td>
-        <td>{{class.endTime}}</td>
+      <tr v-for="course in courses">
+        <td>{{course.courseName}}</td>
+        <td>{{course.teacher}}</td>
+        <td>{{course.startTime}}</td>
+        <td>{{course.endTime}}</td>
       </tr>
     </tbody>
   </table>
@@ -22,10 +22,11 @@
   </div>
 </template>
 <script>
- export default {
-    data() {
-      return { classes: this.$parent.classes }
+  export default {
+    vuex: {
+      getters: {
+        courses: state => state.courses.courseList,
+      },
     },
   };
 </script>
-

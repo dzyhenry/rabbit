@@ -1,7 +1,7 @@
 {
-  "name": "earth",
+  "name": "rabbit",
   "version": "1.0.0",
-  "description": "This is just a simple web app framework based on webpack",
+  "description": "This is a simple web app scaffold based on webpack and vuejs",
   "scripts": {
     "start": "node ./worker"
   },
@@ -26,6 +26,8 @@
     "vue-loader": "^8.5.3",
     "vue-router": "^0.7.13",
     "vue-style-loader": "^1.0.0",
+    "vuex": "^1.0.0-rc.2",
+    "vuex-router-sync": "^2.1.0",
     "webpack": "^1.13.1",
     "webpack-bbq-manifest-generator": "^1.0.3",
     "webpack-dev-server": "^1.14.1"
@@ -40,7 +42,7 @@
   "author": "dzyhenry",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dzyhenry/webapps/issues"
+    "url": "https://github.com/dzyhenry/rabbit/issues"
   },
-  "homepage": "https://github.com/dzyhenry/webapps#readme"
+  "homepage": "https://github.com/dzyhenry/rabbit#readme"
 }

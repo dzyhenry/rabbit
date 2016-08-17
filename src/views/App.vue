@@ -28,7 +28,9 @@
 
 <script>
 import NavTop from '../components/NavTop.vue';
+import store from '../vuex/store'
 export default {
+  store,
   components: { NavTop },
   data () {
     return {

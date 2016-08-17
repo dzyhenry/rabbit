@@ -1,27 +1,20 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
-import { configRouter } from './router';
+import store from './vuex/store';
+import router from './router/router';
+import App from './views/App.vue';
+import { sync } from 'vuex-router-sync';
 /**
  * 引入 bootstrap-3 中 bootstrap.css 基础样式库
  */
 require('bootstrap/dist/css/bootstrap.css');
 require('./styles/layout.css');
 
-// install router
-Vue.use(VueRouter);
-
-// create router
-const router = new VueRouter({
-  history: true,
-  saveScrollPosition: true,
-});
-
-// configure router
-configRouter(router);
+// sync store with router
+sync(store, router);
 
 // boostrap the app
-const App = Vue.extend(require('./views/routeView.vue'));
-router.start(App, '#app');
+const vue = Vue.extend(App);
+router.start(vue, '#app');
 
 // just for debugging
 window.router = router;
