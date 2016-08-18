@@ -1,5 +1,5 @@
 /* eslint no-param-reassign: 0, no-shadow: 0 */
-import { ADD_COURSE, REMOVE_COURSE } from '../mutationTypes';
+import { ADD_COURSE, REMOVE_COURSE } from './mutationTypes';
 
 const state = {
   courseList: [

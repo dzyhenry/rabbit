@@ -1,22 +1,23 @@
 /* eslint  global-require: 0 */
 export default {
-  '/': {
-    component: require('../views/course/index.vue'),
+  '/course': {
+    component: require('../views/routeView.vue'),
+    subRoutes: {
+      '/': {
+        component: require('../views/course/Index.vue'),
+      },
+      '/list': {
+        component: require('../views/course/List.vue'),
+      },
+      '/create': {
+        component: require('../views/course/Create.vue'),
+      },
+      '/about': {
+        component: require('../views/course/About.vue'),
+      },
+    },
   },
-  '/index': {
-    component: require('../views/course/index.vue'),
-  },
-  '/course/list': {
-    component: require('../views/course/list.vue'),
-  },
-  '/course/create': {
-    component: require('../views/course/create.vue'),
-  },
-  '/about': {
-    component: require('../views/about.vue'),
-  },
-
   '*': {
-    component: require('../views/notFound.vue'),
+    component: require('../views/NotFound.vue'),
   },
 };

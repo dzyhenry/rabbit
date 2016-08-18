@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="course in courses">
+      <tr v-for="course in courseList">
         <td>{{course.courseName}}</td>
         <td>{{course.teacher}}</td>
         <td>{{course.startTime}}</td>
@@ -25,7 +25,7 @@
   export default {
     vuex: {
       getters: {
-        courses: state => state.courses.courseList,
+        courseList: state => state.course.courseList,
       },
     },
   };

@@ -1,4 +1,4 @@
-import { ADD_COURSE, REMOVE_COURSE } from '../mutationTypes';
+import { ADD_COURSE, REMOVE_COURSE } from '../store/mutationTypes';
 
 export function AddCourse({ state, dispatch }, course) {
   dispatch(ADD_COURSE, course);
