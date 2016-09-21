@@ -94,7 +94,8 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /\/node_modules\//,
-        loaders: ExtractTextPlugin.extract(styleLoaderName, cssLoaderName).split('!'),
+        loaders: ExtractTextPlugin.extract(styleLoaderName,
+          [cssLoaderName, 'postcss-loader']).split('!'),
       },
       {
         test: /\.(png|jpg|ico)$/,
