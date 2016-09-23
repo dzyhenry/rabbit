@@ -11,6 +11,7 @@ npm start
  
 ###Major module dependencies
 * [htttp-hash-router](https://github.com/Matt-Esch/http-hash-router)
+* [http-hash-mocker](https://github.com/wenbing/http-hash-mocker)
 * [st](https://github.com/isaacs/st)
 
 ###Lisense

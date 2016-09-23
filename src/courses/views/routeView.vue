@@ -37,31 +37,5 @@ export default {
       NavTop: 'NavTop',
     };
   },
-  route: {
-    canActivate (transition) {
-      console.log('inbox canActivate?')
-      if (transition.from.path === '/about') {
-        alert('cannot navigate from /about to /inbox')
-        transition.abort()
-      } else {
-        console.log('yes')
-        transition.next()
-      }
-    },
-    canDeactivate (transition) {
-      return true; // confirm('Are you sure you want to leave inbox?')
-    },
-    activate () {
-      console.log('activating inbox...')
-      return new Promise((resolve) => {
-        console.log('inbox activated.')
-        resolve()
-      })
-    },
-    deactivate ({ next }) {
-      console.log('inbox deactivated.')
-      next()
-    }
-  },
 }
 </script>

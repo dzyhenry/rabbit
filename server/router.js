@@ -6,20 +6,24 @@ const st = require('st');
 const config = require('../config');
 const rootdir = config.rootdir;
 
-// 前端页面
+// view服务
 const viewHandler = require('./handlers/viewHandler');
 
 const router = httpHashRouter();
 
 // api 服务
 const apiHandler = require('./handlers/apiHandler');
-router.set(`${rootdir}api/course/-/*`, apiHandler);
+const mocker = require('./handlers/mocker');
+
+// development环境且配置信息useMock为true时，使用mock数据
+if (process.env.NODE_ENV === 'development' && config.useMock === true) {
+  router.set(`${rootdir}api/*`, mocker);
+} else {
+  router.set(`${rootdir}api/*`, apiHandler);
+}
 
 // web page 渲染
 router.set(`${rootdir}`, viewHandler);
-router.set(`${rootdir}index`, viewHandler);
-router.set(`${rootdir}about`, viewHandler);
-router.set(`${rootdir}about/*`, viewHandler);
 router.set(`${rootdir}course`, viewHandler);
 router.set(`${rootdir}course/*`, viewHandler);
 
@@ -29,6 +33,6 @@ const stOpts = {
   path: config.outputdir,
   cache: process.env.NODE_ENV !== 'development',
 };
-router.set(`${rootdir}*`, st(stOpts));
+router.set(`${rootdir}/*`, st(stOpts));
 
 module.exports = router;

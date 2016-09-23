@@ -1,2 +1,3 @@
 export const ADD_COURSE = 'ADD_COURSE';
+export const UPDATE_COURSE_LIST = 'UPDATE_COURSE_LIST';
 export const REMOVE_COURSE = 'REMOVE_COURSE';

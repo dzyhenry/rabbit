@@ -14,9 +14,9 @@ module.exports = {
   rootdir: rootdir,
   publicPath: publicPath,
   appName,
+  useMock: true,
 };
 
 if (require.main === module) {
   console.log(module.exports);
 }
-

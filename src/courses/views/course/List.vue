@@ -22,11 +22,19 @@
   </div>
 </template>
 <script>
+  import { fetchCourses } from '../../actions/CourseActions';
   export default {
     vuex: {
       getters: {
         courseList: state => state.course.courseList,
       },
+      actions: {
+        fetchCourses,
+      },
     },
+    ready() {
+      console.log('fetch course');
+      this.fetchCourses();
+    }
   };
 </script>

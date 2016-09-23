@@ -7,7 +7,6 @@ if (process.env.NODE_ENV === undefined) {
 const url = require('url');
 const http = require('http');
 
-// 加载本地模块
 const config = require('../config');
 const rootdir = config.rootdir;
 
@@ -15,13 +14,11 @@ const error = require('./error');
 
 const viewRouteSrcList = [
   `${rootdir}`,
-  `${rootdir}/courese`,
+  `${rootdir}/course`,
   `${rootdir}/course/*`,
-  `${rootdir}/about`,
-  `${rootdir}/about/*`,
 ];
 const apiRouteSrcList = [
-  `${rootdir}api/-/*`,
+  `${rootdir}api/*`,
 ];
 const stRouteSrcList = [
   `${rootdir}/*`,
@@ -45,9 +42,7 @@ function main(req, res) {
      * 开发时可以选择清除 routerpath 的 require.cache
      * 重新 require routerpath 后可以更新 router, xxxRouter
      */
-    const needClearRouteSrcList = []
-      .concat(viewRouteSrcList)
-      .concat(apiRouteSrcList);
+    const needClearRouteSrcList = [].concat(viewRouteSrcList).concat(apiRouteSrcList);
     if (needClearRouteSrcList.indexOf(route.src) !== -1) {
       require('clear-require-cache')(routerpath);
       router = require(routerpath);
