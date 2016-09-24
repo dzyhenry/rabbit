@@ -1,8 +1,8 @@
-const httpHashMocker = require('http-hash-mocker');
+const httpHashMocker = require('./http-hash-mocker');
 const config = require('../../config');
 const rootdir = config.rootdir;
 const basedir = config.basedir;
 
-const mocker = httpHashMocker({ basedir, rootdir });
+const mocker = httpHashMocker({ basedir });
 
 module.exports = mocker;
