@@ -1,3 +1,6 @@
+
+'use strict';
+
 /* eslint no-console:0, global-require:0 */
 const sendHtml = require('send-data/html');
 

@@ -1,3 +1,6 @@
+
+'use strict';
+
 /* eslint global-require:0 */
 const httpHashRouter = require('http-hash-router');
 const st = require('st');

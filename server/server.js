@@ -1,5 +1,7 @@
-/* eslint no-console:0, global-require:0 */
+
 'use strict';
+
+/* eslint no-console:0, global-require:0 */
 if (process.env.NODE_ENV === undefined) {
   process.env.NODE_ENV = 'development';
 }
