@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This is a simple web app scaffold based on webpack and vuejs",
   "scripts": {
-    "start": "node ./worker"
+    "start": "node ./worker",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,8 @@
     "vue-style-loader": "^1.0.0",
     "vuex": "^1.0.0-rc.2",
     "vuex-router-sync": "^2.1.0",
-    "xhr-request": "^1.0.1"
+    "xhr-request": "^1.0.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -64,5 +67,6 @@
   "bugs": {
     "url": "https://github.com/dzyhenry/rabbit/issues"
   },
-  "homepage": "https://github.com/dzyhenry/rabbit#readme"
+  "homepage": "https://github.com/dzyhenry/rabbit#readme",
+  "snyk": true
 }
