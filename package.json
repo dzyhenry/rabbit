@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "css-loader": "^0.23.1",
+    "css-loader": "^0.26.2",
     "css-loader-bbq": "^1.0.1",
     "defined": "^1.0.0",
     "http-hash-router": "^1.1.0",
