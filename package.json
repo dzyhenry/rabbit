@@ -15,7 +15,7 @@
     "rabbit"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0",
     "css-loader": "^0.23.1",
     "css-loader-bbq": "^1.0.1",
     "defined": "^1.0.0",
