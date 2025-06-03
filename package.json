@@ -25,7 +25,7 @@
     "vue": "^1.0.26",
     "vue-hot-reload-api": "^1.2.0",
     "vue-router": "^0.7.13",
-    "vue-style-loader": "^1.0.0",
+    "vue-style-loader": "^2.0.1",
     "vuex": "^1.0.0-rc.2",
     "vuex-router-sync": "^2.1.0",
     "xhr-request": "^1.0.1"
